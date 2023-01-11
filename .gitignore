@@ -1,0 +1,11 @@
+# virtual env
+venv
+
+# Ignore output files
+*.csv
+
+# IDE
+.idea
+
+# Python
+__pycache__

@@ -1,0 +1,16 @@
+# 0 8 * * * /path/to/python/bin /path/to/project/directory/app.py >> /path/to/project/directory/cron.log 2>&1
+
+# If new to cron, here are some guides to get you started and explain the above command:
+# https://towardsdatascience.com/how-to-schedule-python-scripts-with-cron-the-only-guide-youll-ever-need-deea2df63b4e
+# https://www.hostinger.com/tutorials/cron-job
+
+# Steps:
+# 1.) Set proper permissions (for mac, skip if linux): https://dccxi.com/posts/crontab-not-working-catalina/#:~:text=Aug%206%2C%202019-,If%20Any%20of%20Your%20Crontab%20Tasks%20No%20Longer%20Works%20on,lists%20located%20at%20System%20Preferences.
+# 2.) Run `pwd` and `which python3` to get absolute paths to script files and python binary
+# 3.) Run `crontab -e` (this will open VIM editor)
+# 4.) Press `i`, then copy command above (subbing in the absolute paths you found earlier)
+# 5.) Press `esc` key, then enter `:wq` to save
+
+# NOTE: if no log file appears after day, or if running on a mac, ensure proper permissions for cron are set.
+# Follow this guide: https://dccxi.com/posts/crontab-not-working-catalina/#:~:text=Aug%206%2C%202019-,If%20Any%20of%20Your%20Crontab%20Tasks%20No%20Longer%20Works%20on,lists%20located%20at%20System%20Preferences.
+
