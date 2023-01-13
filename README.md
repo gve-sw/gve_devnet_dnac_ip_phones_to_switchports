@@ -4,6 +4,7 @@ This script generates a report detailing wired IP Phones and the switches and po
 
 ## Contacts
 * Trevor Maco
+* Jorge Banegas
 
 ## Solution Components
 * DNAC
