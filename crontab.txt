@@ -13,4 +13,3 @@
 
 # NOTE: if no log file appears after day, or if running on a mac, ensure proper permissions for cron are set.
 # Follow this guide: https://dccxi.com/posts/crontab-not-working-catalina/#:~:text=Aug%206%2C%202019-,If%20Any%20of%20Your%20Crontab%20Tasks%20No%20Longer%20Works%20on,lists%20located%20at%20System%20Preferences.
-

@@ -1,6 +1,9 @@
 # virtual env
 venv
 
+# Sensitive Files
+.env
+
 # Ignore output files
 *.csv
 
@@ -9,3 +12,4 @@ venv
 
 # Python
 __pycache__
+

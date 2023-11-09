@@ -19,14 +19,15 @@ This script generates a report detailing wired IP Phones and the switches and po
 
 ## Installation/Configuration
 1. Clone this repository with `git clone https://github.com/gve-sw/gve_devnet_dnac_ip_phones_to_switchports`
-2. Add the IP address, username, and password that you collected in the Prerequisites section to `config.py` file.
-```python
-DNAC_BASE_URL = "<ip address or FQDN>"
-DNAC_USERNAME = "<username>"
-DNAC_PASSWORD = "<password>"
+2. Rename the `.env_sample` file to `.env`.
+3. Add the IP address, username, and password that you collected in the Prerequisites section to `.env` file.
+```dotenv
+DNAC_BASE_URL="<ip address or FQDN>"
+DNAC_USERNAME="<username>"
+DNAC_PASSWORD="<password>"
 ```
-3. Set up a Python virtual environment. Make sure Python 3 is installed in your environment, and if not, you may download Python [here](https://www.python.org/downloads/). Once Python 3 is installed in your environment, you can activate the virtual environment with the instructions found [here](https://docs.python.org/3/tutorial/venv.html).
-4. Install the requirements with `pip3 install -r requirements.txt`
+4. Set up a Python virtual environment. Make sure Python 3 is installed in your environment, and if not, you may download Python [here](https://www.python.org/downloads/). Once Python 3 is installed in your environment, you can activate the virtual environment with the instructions found [here](https://docs.python.org/3/tutorial/venv.html).
+5. Install the requirements with `pip3 install -r requirements.txt`
 
 ## Usage
 To run the code, use the command:

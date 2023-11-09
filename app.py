@@ -10,19 +10,25 @@ writing, software distributed under the License is distributed on an "AS
 IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
 or implied.
 """
+import csv
+import os
+import sys
+from datetime import date
 
 # Import section
 from dnacentersdk import DNACenterAPI, ApiError
+from dotenv import load_dotenv
 from rich.console import Console
-from rich.progress import Progress
 from rich.panel import Panel
-
-from config import *
-
-import csv, sys
-from datetime import date
+from rich.progress import Progress
 
 console = Console()
+
+# Load ENV Variable
+load_dotenv()
+DNAC_BASE_URL = os.getenv("DNAC_BASE_URL")
+DNAC_USERNAME = os.getenv("DNAC_USERNAME")
+DNAC_PASSWORD = os.getenv("DNAC_PASSWORD")
 
 
 def main():
@@ -75,10 +81,12 @@ def main():
             # Extract relevant data from each phone, add to csv
             for phone in phones:
                 progress.console.print(
-                    "Processing: Mac Address - [green]{}[/] ({} of {})".format(phone['additionalInfo']['macAddress'], str(counter), node_count))
+                    "Processing: Mac Address - [green]{}[/] ({} of {})".format(phone['additionalInfo']['macAddress'],
+                                                                               str(counter), node_count))
 
                 # Get switch and port details
-                details = dna_center.clients.get_client_detail(mac_address=phone['additionalInfo']['macAddress'])['detail']
+                details = dna_center.clients.get_client_detail(mac_address=phone['additionalInfo']['macAddress'])[
+                    'detail']
 
                 # Extract relevant information
                 phone_data = {
